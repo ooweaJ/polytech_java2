@@ -16,14 +16,14 @@ public class Cleric {
     int pray(int time) {
         int random = (int) (Math.random() * 2);
         int increment = time + random;
-        MP += increment;
 
-        if (MP > MaxMP) {
+        if (MP + increment > MaxMP) {
             increment = MaxMP - MP;
             MP = MaxMP;
             return increment;
+        } else {
+            MP += increment;
+            return increment;
         }
-
-        return increment;
     }
 }

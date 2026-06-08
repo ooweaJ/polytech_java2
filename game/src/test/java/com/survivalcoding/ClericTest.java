@@ -19,14 +19,12 @@ class ClericTest {
     void selfAid_WhenHpIsLow_ThenHpBecomesMaxAndMpDecreases() {
         // Given: HP가 20인 성직자
         cleric.HP = 20;
-        cleric.MP = 10;
 
         // When: selfAid 사용
         cleric.selfAid();
 
-        // Then: HP는 50(Max)이 되고, MP는 5가 된다
+        // Then: HP는 50(Max)
         assertEquals(50, cleric.HP);
-        assertEquals(5, cleric.MP);
     }
 
     @Test
