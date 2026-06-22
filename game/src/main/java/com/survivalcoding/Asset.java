@@ -1,9 +1,13 @@
 package com.survivalcoding;
 
 public abstract class Asset {
-    String name;
+    private String name;
 
     public Asset(String name) {
         this.name = name;
+    }
+
+    public String GetName() {
+        return name;
     }
 }

@@ -30,7 +30,7 @@ class AssetTest {
         assertEquals(1.4, item2.GetWeight(), "컴퓨터의 무게가 올바르게 조회되어야 합니다.");
 
         item1.SetWeight(0.9);
-        assertEquals(0.9, myBook.weight, "인터페이스를 통해 변경한 무게가 실제 객체 필드에 반영되어야 합니다.");
+        assertEquals(0.9, item1.GetWeight(), "인터페이스를 통해 변경한 무게가 실제 객체 필드에 반영되어야 합니다.");
     }
 
     @Test
@@ -39,8 +39,8 @@ class AssetTest {
         Asset asset1 = myBook;
         Asset asset2 = myPatent;
 
-        assertEquals("자바의 정석", asset1.name, "부모 Asset 타입으로 접근해도 자식의 name 필드에 접근 가능해야 합니다.");
-        assertEquals("특허권", asset2.name, "부모 Asset 타입으로 접근해도 자식의 name 필드에 접근 가능해야 합니다.");
+        assertEquals("자바의 정석", asset1.GetName(), "부모 Asset 타입으로 접근해도 자식의 name 필드에 접근 가능해야 합니다.");
+        assertEquals("특허권", asset2.GetName(), "부모 Asset 타입으로 접근해도 자식의 name 필드에 접근 가능해야 합니다.");
     }
 
 }
